@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Heating Modes</title>
+</head>
+<body>
+<h1>All Heating Modes</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Power</th>
+        <th>Duration</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="mode : ${modes}">
+        <td th:text="${mode.id}"></td>
+        <td th:text="${mode.name}"></td>
+        <td th:text="${mode.power}"></td>
+        <td th:text="${mode.duration}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
